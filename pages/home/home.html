@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="form">
+    <ion-label>input here</ion-label>
+    <ion-input
+      style="height: 50px; width: 100px; background-color: red;"
+      type="number"
+      formControlName="parameterName"
+      [value]="form.get('parameterName').value"
+    ></ion-input>
+  </form>
+  <div>value: {{form.get('parameterName').value}}</div>
+  <div>is invalid: {{form.get('parameterName').invalid}}</div>
+</ion-content>
